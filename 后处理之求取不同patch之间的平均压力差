@@ -1,0 +1,10 @@
+使用命令 foamGet pressureDifferencePatch 将此字典文件导入system;
+修改此文件中的 patch 名称;
+在controlDict文件中添加后处理函数：
+
+functions
+{
+  #includeFunc pressureDifferencePatch
+}
+
+运行求解器即可，此后处理方法属于运行时作后处理。
